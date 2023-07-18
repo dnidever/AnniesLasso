@@ -16,7 +16,10 @@ import sys
 from six import string_types
 from tempfile import mkstemp
 from time import time
-from collections import Iterable
+try:
+    from collections import Iterable
+except:
+    from collections.abc import Iterable
 from hashlib import md5
 from multiprocessing.pool import Pool
 from multiprocessing import Lock, TimeoutError, Value
